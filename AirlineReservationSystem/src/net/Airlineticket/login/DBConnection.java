@@ -22,7 +22,7 @@ public static void main(String[] args) {
 			
 			String sql = "INSERT INTO user " 
 						+ "(username, email, password)"
-						+ "VALUES ('jhon', 'jon@mail.com', 'test123')";
+						+ "VALUES ('Marie', 'santa@mail.com', 'test123')";
 			myStatement.executeUpdate(sql);
 			
 			System.out.println("Insert complete");
