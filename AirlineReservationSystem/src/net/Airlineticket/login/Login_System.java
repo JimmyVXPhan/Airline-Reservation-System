@@ -11,9 +11,11 @@ import javax.swing.JSeparator;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 
 public class Login_System {
-	// sample
+	
 
 	private JFrame frame;
 	private JTextField txtUsername;
@@ -128,12 +130,16 @@ public class Login_System {
 		separator.setBounds(21, 179, 451, 14);
 		frame.getContentPane().add(separator);
 		
-		JButton btnNewButton_3 = new JButton("Sign Up");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton btnClickHereTo = new JButton("Click here to Signup");
+		btnClickHereTo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				frame.dispose();
+				SignupSystem SignupSys = new SignupSystem();
+				SignupSys.setVisible(true);
+					
 			}
 		});
-		btnNewButton_3.setBounds(362, 149, 117, 29);
-		frame.getContentPane().add(btnNewButton_3);
+		btnClickHereTo.setBounds(293, 155, 179, 29);
+		frame.getContentPane().add(btnClickHereTo);
 	}
 }
