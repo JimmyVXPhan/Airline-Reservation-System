@@ -151,8 +151,8 @@ public class Login_System {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("/Users/evankim/Desktop/login_picture.jpg"));
-		lblNewLabel_2.setBounds(0, 0, 750, 600);
+		lblNewLabel_2.setIcon(new ImageIcon(Login_System.class.getResource("/images/login_picture.jpg")));
+		lblNewLabel_2.setBounds(0, -11, 750, 600);
 		frame.getContentPane().add(lblNewLabel_2);
 	}
 }
