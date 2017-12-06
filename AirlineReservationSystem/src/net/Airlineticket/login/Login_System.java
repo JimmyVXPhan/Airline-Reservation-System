@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class Login_System {
 	
@@ -51,31 +52,31 @@ public class Login_System {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.PINK);
-		frame.setBounds(200, 200, 500, 300);
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(400, 400, 700, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("Login System");
+		JLabel lblNewLabel = new JLabel("Login");
 		lblNewLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 16));
-		lblNewLabel.setBounds(192, 20, 109, 20);
+		lblNewLabel.setBounds(283, 297, 109, 20);
 		frame.getContentPane().add(lblNewLabel);
 		
 		JLabel lblUsername = new JLabel("Username");
-		lblUsername.setBounds(37, 79, 85, 16);
+		lblUsername.setBounds(124, 334, 85, 16);
 		frame.getContentPane().add(lblUsername);
 		
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(37, 122, 85, 16);
+		lblPassword.setBounds(124, 370, 85, 16);
 		frame.getContentPane().add(lblPassword);
 		
 		txtUsername = new JTextField();
-		txtUsername.setBounds(134, 74, 218, 26);
+		txtUsername.setBounds(275, 329, 218, 26);
 		frame.getContentPane().add(txtUsername);
 		txtUsername.setColumns(10);
 		
 		txtPassword = new JTextField();
-		txtPassword.setBounds(134, 117, 218, 26);
+		txtPassword.setBounds(275, 365, 218, 26);
 		frame.getContentPane().add(txtPassword);
 		txtPassword.setColumns(10);
 		
@@ -99,7 +100,7 @@ public class Login_System {
 				}
 			}
 		});
-		btnNewButton.setBounds(37, 205, 117, 29);
+		btnNewButton.setBounds(56, 510, 117, 29);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Reset");
@@ -109,7 +110,7 @@ public class Login_System {
 				txtPassword.setText(null);
 			}
 		});
-		btnNewButton_1.setBounds(184, 205, 117, 29);
+		btnNewButton_1.setBounds(275, 510, 117, 29);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Exit");
@@ -125,11 +126,11 @@ public class Login_System {
 				
 			}
 		});
-		btnNewButton_2.setBounds(328, 205, 117, 29);
+		btnNewButton_2.setBounds(511, 510, 117, 29);
 		frame.getContentPane().add(btnNewButton_2);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(21, 179, 451, 14);
+		separator.setBounds(21, 457, 658, 14);
 		frame.getContentPane().add(separator);
 		
 		JButton btnClickHereTo = new JButton("Click here to Signup");
@@ -141,7 +142,17 @@ public class Login_System {
 					
 			}
 		});
-		btnClickHereTo.setBounds(293, 155, 179, 29);
+		btnClickHereTo.setBounds(469, 430, 179, 29);
 		frame.getContentPane().add(btnClickHereTo);
+		
+		JLabel lblNewLabel_1 = new JLabel("Welcome to Sonic Flight!");
+		lblNewLabel_1.setFont(new Font("Lucida Grande", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(228, 28, 244, 36);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("/Users/evankim/Desktop/login_picture.jpg"));
+		lblNewLabel_2.setBounds(0, 0, 750, 600);
+		frame.getContentPane().add(lblNewLabel_2);
 	}
 }
