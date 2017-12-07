@@ -35,6 +35,7 @@ public class SignupSystem extends JFrame {
 	private JTextField txtemail;
 	private JTextField txtssn;
 	private JTextField txtAnswer;
+	protected JFrame frmSignupSystem;
 
 	/**
 	 * Launch the application.
@@ -161,9 +162,9 @@ public class SignupSystem extends JFrame {
 		contentPane.add(txtssn);
 		txtssn.setColumns(10);
 		
-		JButton btnRegister = new JButton("REGISTER");
-		btnRegister.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		btnRegister.addActionListener(new ActionListener() {
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		btnSubmit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				String firstName = txtfirstName.getText();
@@ -178,9 +179,12 @@ public class SignupSystem extends JFrame {
 				String Answer = txtAnswer.getText();
 				
 				
-				LoginSystem Login = new LoginSystem();
-				Login.setVisible(true);
-				dispose();
+				frmSignupSystem = new JFrame("Exit");
+				if (JOptionPane.showConfirmDialog(frmSignupSystem,  "Confirm?", "Signup Systems", JOptionPane.YES_NO_OPTION)== JOptionPane.YES_NO_OPTION) {
+					dispose();
+					LoginSystem Login = new LoginSystem();
+					Login.setVisible(true);
+				}
 				
 				if (firstName.length() == 0 || lastName.length() == 0 || Address.length() == 0 || zip.length() == 0 || State.length() == 0) {
 					txtfirstName.setText(null);
@@ -206,10 +210,10 @@ public class SignupSystem extends JFrame {
 				
 			}
 		});
-		btnRegister.setBounds(63, 520, 117, 29);
-		contentPane.add(btnRegister);
+		btnSubmit.setBounds(63, 520, 117, 29);
+		contentPane.add(btnSubmit);
 		
-		JButton btnNewButton = new JButton("RESET");
+		JButton btnNewButton = new JButton("Reset");
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
